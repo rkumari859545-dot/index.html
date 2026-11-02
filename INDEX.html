@@ -1,0 +1,2068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>/*==============================
+RECIPEVERSE CSS
+Part 2A
+==============================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#fff8f3;
+    color:#333;
+}
+
+/*==============================
+HEADER
+==============================*/
+
+header{
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:999;
+    background:#ffffff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.logo{
+    font-size:30px;
+    font-weight:700;
+    color:#ff6b35;
+}
+
+.logo span{
+    color:#222;
+}
+
+nav{
+    display:flex;
+    gap:35px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#ff6b35;
+}
+
+.header-icons button{
+    width:45px;
+    height:45px;
+    border:none;
+    border-radius:50%;
+    background:#ff6b35;
+    color:white;
+    cursor:pointer;
+    font-size:18px;
+    transition:.3s;
+}
+
+.header-icons button:hover{
+    transform:rotate(180deg);
+}
+
+/*==============================
+HERO
+==============================*/
+
+.hero{
+
+    margin-top:80px;
+
+    height:90vh;
+
+    background:url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1600") center/cover;
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.55);
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    color:white;
+
+    text-align:center;
+
+    width:90%;
+
+    max-width:850px;
+
+}
+
+.hero h1{
+
+    font-size:65px;
+
+    margin-bottom:20px;
+
+}
+
+.hero p{
+
+    font-size:22px;
+
+    margin-bottom:35px;
+
+}
+
+.search-box{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.search-box input{
+
+    width:70%;
+
+    padding:18px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:50px 0 0 50px;
+
+    font-size:18px;
+
+}
+
+.search-box button{
+
+    padding:18px 35px;
+
+    border:none;
+
+    background:#ff6b35;
+
+    color:white;
+
+    cursor:pointer;
+
+    border-radius:0 50px 50px 0;
+
+    font-size:18px;
+
+}
+
+.search-box button:hover{
+
+    background:#ff824f;
+
+}
+
+/*==============================
+SECTION
+==============================*/
+
+section{
+
+    padding:80px 8%;
+
+}
+
+section h2{
+
+    text-align:center;
+
+    font-size:40px;
+
+    margin-bottom:50px;
+
+}
+
+/*==============================
+CATEGORY
+==============================*/
+
+.category-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:25px;
+
+}
+
+.category-card{
+
+background:white;
+
+border-radius:20px;
+
+padding:35px;
+
+text-align:center;
+
+text-decoration:none;
+
+color:#333;
+
+transition:.35s;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.category-card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.category-card{
+
+font-size:55px;
+
+}
+
+.category-card h3{
+
+margin:15px 0;
+
+font-size:24px;
+
+}
+
+.category-card p{
+
+color:#666;
+
+}
+
+/*==============================
+RECIPE GRID
+==============================*/
+
+.recipe-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:35px;
+
+}
+
+/*==============================
+RECIPE CARD
+==============================*/
+
+.recipe-card{
+
+background:white;
+
+border-radius:20px;
+
+overflow:hidden;
+
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+transition:.4s;
+
+}
+
+.recipe-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.recipe-card img{
+
+width:100%;
+
+height:240px;
+
+object-fit:cover;
+
+}
+
+.recipe-info{
+
+padding:20px;
+
+}
+
+.recipe-info h3{
+
+margin-bottom:12px;
+
+font-size:25px;
+
+}
+
+.recipe-info p{
+
+color:#666;
+
+margin-bottom:10px;
+
+}
+
+.recipe-info button{
+
+margin-top:15px;
+
+padding:12px 22px;
+
+background:#ff6b35;
+
+color:white;
+
+border:none;
+
+border-radius:30px;
+
+cursor:pointer;
+
+}
+
+.recipe-info button:hover{
+
+background:#ff824f;
+
+}
+
+/*==============================
+RANDOM BUTTON
+==============================*/
+
+.random{
+
+text-align:center;
+
+}
+
+.random button{
+
+padding:18px 45px;
+
+font-size:20px;
+
+background:#ff6b35;
+
+color:white;
+
+border:none;
+
+border-radius:40px;
+
+cursor:pointer;
+
+}
+
+.random button:hover{
+
+background:#ff824f;
+
+}
+
+/*==============================
+NEWSLETTER
+==============================*/
+
+.newsletter{
+
+background:#ff6b35;
+
+color:white;
+
+text-align:center;
+
+}
+
+.newsletter-box{
+
+margin-top:25px;
+
+display:flex;
+
+justify-content:center;
+
+}
+
+.newsletter-box input{
+
+padding:18px;
+
+width:420px;
+
+border:none;
+
+border-radius:40px 0 0 40px;
+
+outline:none;
+
+}
+
+.newsletter-box button{
+
+padding:18px 30px;
+
+border:none;
+
+background:#222;
+
+color:white;
+
+border-radius:0 40px 40px 0;
+
+cursor:pointer;
+
+}
+
+/*==============================
+FOOTER
+==============================*/
+
+footer{
+
+background:#1f1f1f;
+
+color:white;
+
+padding:60px 8%;
+
+}
+
+.footer-container{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:40px;
+
+}
+
+footer a{
+
+display:block;
+
+margin:10px 0;
+
+color:#ddd;
+
+text-decoration:none;
+
+}
+
+footer a:hover{
+
+color:#ff6b35;
+
+}
+
+footer i{
+
+font-size:25px;
+
+margin-right:15px;
+
+cursor:pointer;
+
+}
+
+footer hr{
+
+margin:40px 0;
+
+border:1px solid #444;
+
+}
+
+.copyright{
+
+text-align:center;
+
+}
+
+/*==============================
+MOBILE
+==============================*/
+
+@media(max-width:900px){
+
+header{
+
+padding:18px 5%;
+
+flex-direction:column;
+
+}
+
+nav{
+
+margin:20px 0;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.hero h1{
+
+font-size:42px;
+
+}
+
+.search-box{
+
+flex-direction:column;
+
+}
+
+.search-box input{
+
+width:100%;
+
+border-radius:40px;
+
+margin-bottom:15px;
+
+}
+
+.search-box button{
+
+width:100%;
+
+border-radius:40px;
+
+}
+
+.newsletter-box{
+
+flex-direction:column;
+
+}
+
+.newsletter-box input{
+
+width:100%;
+
+border-radius:40px;
+
+margin-bottom:15px;
+
+}
+
+.newsletter-box button{
+
+width:100%;
+
+border-radius:40px;
+
+}
+
+}/* ===================================
+   PART 2B
+   Dark Mode + Premium Effects
+=================================== */
+
+/* DARK MODE */
+
+body.dark{
+
+background:#111;
+
+color:#fff;
+
+}
+
+body.dark header{
+
+background:#1c1c1c;
+
+}
+
+body.dark nav a{
+
+color:#fff;
+
+}
+
+body.dark .logo span{
+
+color:#fff;
+
+}
+
+body.dark .category-card{
+
+background:#1f1f1f;
+
+color:#fff;
+
+}
+
+body.dark .recipe-card{
+
+background:#1f1f1f;
+
+color:#fff;
+
+}
+
+body.dark .recipe-info p{
+
+color:#ccc;
+
+}
+
+body.dark footer{
+
+background:#000;
+
+}
+
+body.dark .newsletter{
+
+background:#222;
+
+}
+
+/* ==========================
+GLASSMORPHISM
+========================== */
+
+.category-card{
+
+backdrop-filter:blur(10px);
+
+background:rgba(255,255,255,.95);
+
+}
+
+.recipe-card{
+
+backdrop-filter:blur(15px);
+
+background:rgba(255,255,255,.95);
+
+}
+
+/* ==========================
+HOVER EFFECTS
+========================== */
+
+.category-card:hover{
+
+box-shadow:0 20px 40px rgba(255,107,53,.25);
+
+}
+
+.recipe-card:hover img{
+
+transform:scale(1.08);
+
+transition:.5s;
+
+}
+
+.recipe-card img{
+
+transition:.5s;
+
+}
+
+/* ==========================
+BADGES
+========================== */
+
+.badge{
+
+display:inline-block;
+
+padding:8px 15px;
+
+border-radius:30px;
+
+font-size:13px;
+
+font-weight:600;
+
+margin-right:8px;
+
+margin-top:10px;
+
+}
+
+.veg{
+
+background:#4CAF50;
+
+color:white;
+
+}
+
+.nonveg{
+
+background:#ff4d4d;
+
+color:white;
+
+}
+
+.easy{
+
+background:#2196F3;
+
+color:white;
+
+}
+
+.medium{
+
+background:#FFC107;
+
+color:black;
+
+}
+
+.hard{
+
+background:#9C27B0;
+
+color:white;
+
+}
+
+/* ==========================
+BUTTONS
+========================== */
+
+.recipe-btn{
+
+display:flex;
+
+justify-content:space-between;
+
+margin-top:20px;
+
+gap:10px;
+
+}
+
+.recipe-btn button{
+
+flex:1;
+
+padding:12px;
+
+border:none;
+
+cursor:pointer;
+
+border-radius:30px;
+
+font-size:15px;
+
+transition:.3s;
+
+}
+
+.viewBtn{
+
+background:#ff6b35;
+
+color:white;
+
+}
+
+.saveBtn{
+
+background:#4CAF50;
+
+color:white;
+
+}
+
+.shareBtn{
+
+background:#2196F3;
+
+color:white;
+
+}
+
+.recipe-btn button:hover{
+
+transform:translateY(-3px);
+
+}
+
+/* ==========================
+LOADER
+========================== */
+
+.loader{
+
+display:none;
+
+width:70px;
+
+height:70px;
+
+margin:60px auto;
+
+border:8px solid #eee;
+
+border-top:8px solid #ff6b35;
+
+border-radius:50%;
+
+animation:spin 1s linear infinite;
+
+}
+
+@keyframes spin{
+
+100%{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+/* ==========================
+POPUP
+========================== */
+
+.popup{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:rgba(0,0,0,.75);
+
+display:none;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:9999;
+
+padding:20px;
+
+}
+
+.popup-content{
+
+background:white;
+
+width:90%;
+
+max-width:900px;
+
+max-height:90vh;
+
+overflow:auto;
+
+border-radius:20px;
+
+padding:30px;
+
+position:relative;
+
+}
+
+body.dark .popup-content{
+
+background:#1f1f1f;
+
+color:white;
+
+}
+
+.popup img{
+
+width:100%;
+
+border-radius:15px;
+
+margin-bottom:20px;
+
+}
+
+.close{
+
+position:absolute;
+
+top:15px;
+
+right:20px;
+
+font-size:35px;
+
+cursor:pointer;
+
+color:red;
+
+}
+
+/* ==========================
+INGREDIENTS
+========================== */
+
+.ingredients{
+
+margin-top:25px;
+
+}
+
+.ingredients li{
+
+margin-bottom:12px;
+
+line-height:1.8;
+
+}
+
+/* ==========================
+INSTRUCTIONS
+========================== */
+
+.instructions{
+
+margin-top:25px;
+
+line-height:1.9;
+
+}
+
+/* ==========================
+YOUTUBE BUTTON
+========================== */
+
+.youtube-btn{
+
+display:inline-block;
+
+margin-top:25px;
+
+padding:15px 25px;
+
+background:#ff0000;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:40px;
+
+font-weight:600;
+
+}
+
+.youtube-btn:hover{
+
+background:#d60000;
+
+}
+
+/* ==========================
+SEARCH ANIMATION
+========================== */
+
+.search-box{
+
+box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+border-radius:50px;
+
+overflow:hidden;
+
+}
+
+/* ==========================
+SCROLLBAR
+========================== */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#ff6b35;
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#eee;
+
+}
+
+/* ==========================
+SECTION ANIMATION
+========================== */
+
+section{
+
+animation:fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ==========================
+RECIPE IMAGE EFFECT
+========================== */
+
+.recipe-card{
+
+overflow:hidden;
+
+}
+
+.recipe-card img{
+
+height:250px;
+
+object-fit:cover;
+
+}
+
+/* ==========================
+FOOTER ICONS
+========================== */
+
+footer i{
+
+transition:.3s;
+
+}
+
+footer i:hover{
+
+color:#ff6b35;
+
+transform:scale(1.2);
+
+}
+
+/* ==========================
+RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+.hero{
+
+height:70vh;
+
+}
+
+.hero h1{
+
+font-size:34px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+section h2{
+
+font-size:30px;
+
+}
+
+.recipe-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.category-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.popup-content{
+
+padding:20px;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.category-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.logo{
+
+font-size:24px;
+
+}
+
+header{
+
+padding:15px;
+
+}
+
+nav{
+
+gap:15px;
+
+}
+
+}</style>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RecipeVerse | Discover Delicious Recipes</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<script>// ===============================
+// RecipeVerse - Part 3A
+// ===============================
+
+// API URL
+const API_URL = "https://www.themealdb.com/api/json/v1/1/";
+
+// Elements
+const recipeContainer = document.getElementById("popularRecipes");
+const latestContainer = document.getElementById("latestRecipes");
+const searchInput = document.getElementById("searchInput");
+const searchBtn = document.getElementById("searchBtn");
+const randomBtn = document.getElementById("randomRecipe");
+const darkBtn = document.getElementById("darkMode");
+
+// ===============================
+// Load Default Recipes
+// ===============================
+
+window.onload = () => {
+
+    loadPopular();
+
+    loadLatest();
+
+};
+
+// ===============================
+// Recipe Card
+// ===============================
+
+function createRecipeCard(meal){
+
+    return `
+
+    <div class="recipe-card">
+
+        <img src="${meal.strMealThumb}" alt="${meal.strMeal}">
+
+        <div class="recipe-info">
+
+            <h3>${meal.strMeal}</h3>
+
+            <p><strong>Category:</strong> ${meal.strCategory}</p>
+
+            <p><strong>Cuisine:</strong> ${meal.strArea}</p>
+
+            <button onclick="viewRecipe('${meal.idMeal}')">
+
+                View Recipe
+
+            </button>
+
+        </div>
+
+    </div>
+
+    `;
+
+}
+
+// ===============================
+// Popular Recipes
+// ===============================
+
+async function loadPopular(){
+
+    const res = await fetch(API_URL + "search.php?s=chicken");
+
+    const data = await res.json();
+
+    recipeContainer.innerHTML = "";
+
+    data.meals.slice(0,6).forEach(meal=>{
+
+        recipeContainer.innerHTML += createRecipeCard(meal);
+
+    });
+
+}
+
+// ===============================
+// Latest Recipes
+// ===============================
+
+async function loadLatest(){
+
+    const res = await fetch(API_URL + "search.php?s=beef");
+
+    const data = await res.json();
+
+    latestContainer.innerHTML="";
+
+    data.meals.slice(0,6).forEach(meal=>{
+
+        latestContainer.innerHTML += createRecipeCard(meal);
+
+    });
+
+}
+
+// ===============================
+// Search
+// ===============================
+
+searchBtn.addEventListener("click",()=>{
+
+    searchRecipe();
+
+});
+
+searchInput.addEventListener("keypress",(e)=>{
+
+    if(e.key==="Enter"){
+
+        searchRecipe();
+
+    }
+
+});
+
+async function searchRecipe(){
+
+    const value = searchInput.value.trim();
+
+    if(value===""){
+
+        alert("Enter recipe name");
+
+        return;
+
+    }
+
+    const res = await fetch(API_URL+"search.php?s="+value);
+
+    const data = await res.json();
+
+    recipeContainer.innerHTML="";
+
+    latestContainer.innerHTML="";
+
+    if(data.meals){
+
+        data.meals.forEach(meal=>{
+
+            recipeContainer.innerHTML += createRecipeCard(meal);
+
+        });
+
+    }else{
+
+        recipeContainer.innerHTML="<h2>No Recipe Found</h2>";
+
+    }
+
+}// =================================
+// PART 3B
+// Dark Mode + Random Recipe + Popup
+// =================================
+
+
+// ===============================
+// DARK MODE
+// ===============================
+
+darkBtn.addEventListener("click",()=>{
+
+    document.body.classList.toggle("dark");
+
+    if(document.body.classList.contains("dark")){
+
+        localStorage.setItem("theme","dark");
+
+        darkBtn.innerHTML="☀️";
+
+    }
+    else{
+
+        localStorage.setItem("theme","light");
+
+        darkBtn.innerHTML="🌙";
+
+    }
+
+});
+
+
+// Load saved theme
+
+if(localStorage.getItem("theme")==="dark"){
+
+    document.body.classList.add("dark");
+
+    darkBtn.innerHTML="☀️";
+
+}
+
+
+
+// ===============================
+// RANDOM RECIPE
+// ===============================
+
+randomBtn.addEventListener("click",randomRecipe);
+
+
+async function randomRecipe(){
+
+    const response = await fetch(
+        API_URL+"random.php"
+    );
+
+
+    const data = await response.json();
+
+
+    if(data.meals){
+
+        showRecipePopup(data.meals[0]);
+
+    }
+
+}
+
+
+
+// ===============================
+// VIEW RECIPE
+// ===============================
+
+
+async function viewRecipe(id){
+
+
+    const response = await fetch(
+        API_URL+"lookup.php?i="+id
+    );
+
+
+    const data = await response.json();
+
+
+    showRecipePopup(data.meals[0]);
+
+
+}
+
+
+
+// ===============================
+// POPUP RECIPE DETAILS
+// ===============================
+
+
+function showRecipePopup(meal){
+
+
+const popup = document.getElementById("popup");
+
+const popupBody = document.getElementById("popupBody");
+
+
+
+let ingredients="";
+
+
+for(let i=1;i<=20;i++){
+
+
+let ingredient = meal["strIngredient"+i];
+
+
+let measure = meal["strMeasure"+i];
+
+
+
+if(ingredient && ingredient.trim()!==""){
+
+
+ingredients += `
+
+<li>
+
+${measure} ${ingredient}
+
+</li>
+
+`;
+
+}
+
+}
+
+
+
+popupBody.innerHTML = `
+
+
+<img src="${meal.strMealThumb}">
+
+
+<h1>
+
+${meal.strMeal}
+
+</h1>
+
+
+
+<p>
+
+<strong>Category:</strong>
+
+${meal.strCategory}
+
+</p>
+
+
+<p>
+
+<strong>Cuisine:</strong>
+
+${meal.strArea}
+
+</p>
+
+
+
+<h2>
+
+Ingredients
+
+</h2>
+
+
+<ul class="ingredients">
+
+${ingredients}
+
+</ul>
+
+
+
+<h2>
+
+Instructions
+
+</h2>
+
+
+<p class="instructions">
+
+${meal.strInstructions}
+
+</p>
+
+
+
+${meal.strYoutube ?
+
+`
+
+<a class="youtube-btn"
+
+href="${meal.strYoutube}"
+
+target="_blank">
+
+▶ Watch Cooking Video
+
+</a>
+
+`
+
+:
+
+""
+
+}
+
+
+`;
+
+
+
+popup.style.display="flex";
+
+
+}
+
+
+
+// ===============================
+// CLOSE POPUP
+// ===============================
+
+
+const closePopup=document.querySelector(".close");
+
+
+if(closePopup){
+
+
+closePopup.onclick=()=>{
+
+
+document.getElementById("popup").style.display="none";
+
+
+};
+
+
+}
+
+
+
+// Close popup when clicking outside
+
+
+window.onclick=(e)=>{
+
+
+const popup=document.getElementById("popup");
+
+
+if(e.target===popup){
+
+
+popup.style.display="none";
+
+
+}
+
+
+};// =================================
+// PART 3C
+// Improved Recipe Card
+// =================================
+
+
+function createRecipeCard(meal){
+
+return `
+
+<div class="recipe-card">
+
+<img src="${meal.strMealThumb}" 
+alt="${meal.strMeal}">
+
+
+<div class="recipe-info">
+
+<h3>${meal.strMeal}</h3>
+
+
+<p>
+
+🍽 ${meal.strCategory}
+
+</p>
+
+
+<p>
+
+🌍 ${meal.strArea}
+
+</p>
+
+
+
+<div class="recipe-btn">
+
+
+<button 
+class="viewBtn"
+onclick="viewRecipe('${meal.idMeal}')">
+
+View Recipe
+
+</button>
+
+
+
+<button 
+class="saveBtn"
+onclick='saveFavorite(${JSON.stringify(meal)})'>
+
+❤️ Save
+
+</button>
+
+
+</div>
+
+
+</div>
+
+</div>
+
+`;
+
+}</script>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+<div class="logo">
+
+🍽 <span>RecipeVerse</span>
+
+</div>
+
+<nav>
+
+<a href="#">Home</a>
+
+<a href="#categories">Categories</a>
+
+<a href="#popular">Popular</a>
+
+<a href="#about">About</a>
+
+</nav>
+
+<div class="header-icons">
+
+<button id="darkMode">
+
+<i class="fa-solid fa-moon"></i>
+
+</button>
+
+</div>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="overlay"></div>
+
+<div class="hero-content">
+
+<h1>
+
+Discover Delicious Recipes
+
+</h1>
+
+<p>
+
+Search thousands of recipes from around the world.
+
+</p>
+
+<div class="search-box">
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search Pizza, Burger, Pasta...">
+
+<button id="searchBtn">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+Search
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= CATEGORIES ================= -->
+
+<section id="categories" class="categories">
+
+<h2>
+
+Browse Categories
+
+</h2>
+
+<div class="category-grid">
+
+<a href="pizza.html" class="category-card">
+
+🍕
+
+<h3>Pizza</h3>
+
+<p>20+ Recipes</p>
+
+</a>
+
+<a href="burger.html" class="category-card">
+
+🍔
+
+<h3>Burger</h3>
+
+<p>20+ Recipes</p>
+
+</a>
+
+<a href="pasta.html" class="category-card">
+
+🍝
+
+<h3>Pasta</h3>
+
+<p>20+ Recipes</p>
+
+</a>
+
+<a href="biryani.html" class="category-card">
+
+🍛
+
+<h3>Biryani</h3>
+
+<p>20+ Recipes</p>
+
+</a>
+
+<a href="dessert.html" class="category-card">
+
+🍰
+
+<h3>Desserts</h3>
+
+<p>20+ Recipes</p>
+
+</a>
+
+<a href="indian.html" class="category-card">
+
+🥘
+
+<h3>Indian</h3>
+
+<p>20+ Recipes</p>
+
+</a>
+
+<a href="chinese.html" class="category-card">
+
+🍜
+
+<h3>Chinese</h3>
+
+<p>20+ Recipes</p>
+
+</a>
+
+<a href="drinks.html" class="category-card">
+
+🥤
+
+<h3>Drinks</h3>
+
+<p>20+ Recipes</p>
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ================= POPULAR RECIPES ================= -->
+
+<section id="popular">
+
+<h2>
+
+Popular Recipes
+
+</h2>
+
+<div id="popularRecipes"
+
+class="recipe-grid">
+
+<!-- JavaScript will load recipes -->
+
+</div>
+
+</section>
+
+<!-- ================= LATEST RECIPES ================= -->
+
+<section>
+
+<h2>
+
+Latest Recipes
+
+</h2>
+
+<div id="latestRecipes"
+
+class="recipe-grid">
+
+</div>
+
+</section>
+
+<!-- ================= RANDOM ================= -->
+
+<section class="random">
+
+<h2>
+
+Can't Decide?
+
+</h2>
+
+<button id="randomRecipe">
+
+🎲 Surprise Me
+
+</button>
+
+</section>
+
+<!-- ================= NEWSLETTER ================= -->
+
+<section class="newsletter">
+
+<h2>
+
+Join Our Newsletter
+
+</h2>
+
+<p>
+
+Get delicious recipes every week.
+
+</p>
+
+<div class="newsletter-box">
+
+<input
+type="email"
+placeholder="Enter Email">
+
+<button>
+
+Subscribe
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer id="about">
+
+<div class="footer-container">
+
+<div>
+
+<h3>
+
+RecipeVerse
+
+</h3>
+
+<p>
+
+Your premium destination for discovering delicious recipes from every cuisine.
+
+</p>
+
+</div>
+
+<div>
+
+<h4>
+
+Quick Links
+
+</h4>
+
+<a href="#">Home</a>
+
+<a href="#">Categories</a>
+
+<a href="#">Recipes</a>
+
+<a href="#">About</a>
+
+</div>
+
+<div>
+
+<h4>
+
+Categories
+
+</h4>
+
+<a href="pizza.html">Pizza</a>
+
+<a href="burger.html">Burger</a>
+
+<a href="pasta.html">Pasta</a>
+
+<a href="dessert.html">Desserts</a>
+
+</div>
+
+<div>
+
+<h4>
+
+Follow Us
+
+</h4>
+
+<i class="fa-brands fa-facebook"></i>
+
+<i class="fa-brands fa-instagram"></i>
+
+<i class="fa-brands fa-youtube"></i>
+
+<i class="fa-brands fa-x-twitter"></i>
+
+</div>
+
+</div>
+
+<hr>
+
+<p class="copyright">
+
+© 2026 RecipeVerse. All Rights Reserved.
+
+</p>
+
+</footer>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
